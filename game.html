@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alphabet Selector</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            background-color: #3498db;
+        }
+
+
+        .alphabet-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 1rem;
+          
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .top {
+    width: 100%;
+    padding: 20px;
+    background-color: #3498db; /* Blue background */
+    color: white;
+    /* text-align: center; */
+    display: flex;
+
+    gap: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.top img {
+    width: 30px; /* Adjust size of the image */
+    height: 30px;
+    object-fit: contain;
+}
+
+.top h2 {
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+        .alphabet-container button {
+            width: 10%;
+            height: 10%;
+            margin: 0.3rem;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #181616;
+            background-color: #c5c5c5;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .singleaphbet{
+            /* border: 1px solid black; */
+            height: 50px;
+            width: 30px;
+            border-radius: 10px;
+            background-color: #3e46b4;
+            color: rgb(8, 8, 8);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+            font-size: 1rem;
+            font-weight: 800;
+        }
+        #alphabet {
+            margin-bottom: 20px;
+        }
+        #display {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .alphabet-container button:hover {
+            background-color: #1c5983;
+        }
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 2;
+            flex-direction: column;
+        }
+
+        .modal-content {
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            border-radius: 10px;
+          
+            text-align: center;
+        }
+        .modal-content button {
+    margin: 10px;
+    padding: 12px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    background-color: #3498db;
+    color: white;
+    cursor: pointer;
+    width: 200px;
+    transition: background-color 0.3s ease;
+}
+
+        .modal-content button:hover {
+            background-color: #3498db;
+            color: white;
+        }
+        .modal-content button:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(52, 152, 219, 0.7);
+}
+    </style>
+</head>
+<body>
+ <div class="top">
+    <img class="img" src="./images/more.png" alt="">
+    <h2 class="text"></h2>
+ </div>
+    <div class="container">
+        <div class="empty-box" id="display">
+         
+        </div>
+    </div>
+    <div id="pause-modal" class="modal">
+        <div class="modal-content">
+            <h2>Paused</h2>
+            <button class="continue">Continue</button>
+            <button class="new-category">New Category</button>
+            <button class="quit-game">Quit Game</button>
+        </div>
+    </div>
+    <div id="win-modal" class="modal">
+        <div class="modal-content">
+            <h2>Congratulations! You won!</h2>
+            <button class="play-again">Play Again</button>
+            <button class="new-category">New Category</button>
+            <button class="quit-game">Quit Game</button>
+        </div>
+    </div>
+    <div id="loss-modal" class="modal">
+        <div class="modal-content">
+            <h2> You Loss!</h2>
+            <button class="play-again">Play Again</button>
+            <button class="new-category">New Category</button>
+            <button class="quit-game">Quit Game</button>
+        </div>
+    </div>
+
+    <div class="alphabet-container" id="alphabet">
+
+    </div>
+
+    <script src="script.js">
+       
+    </script>
+
+</body>
+</html>

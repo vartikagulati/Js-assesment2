@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+       * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+.container {
+    background-image: url('./images/background-tablet.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    width: 15rem;
+    height: 15rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.2); /* Slight transparency */
+    box-shadow: 1px 1px 10px 5px rgba(71, 71, 71, 0.5);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.box:hover {
+    box-shadow: 1px 1px 10px 5px rgba(46, 112, 167, 0.8);
+    transform: scale(1.05);
+}
+
+button {
+    width: 80%;
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background-color: rgb(46, 112, 167);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+button:hover {
+    background-color: rgb(24, 82, 137);
+    transform: translateY(-3px);
+}
+
+button:active {
+    transform: translateY(1px);
+    background-color: rgb(20, 72, 127);
+}
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="box">
+            <button>PLAY</button>
+            <button>
+                How to Play
+            </button>
+        </div>
+    </div>
+
+    <script>
+        const box= document.getElementsByClassName('box')[0]
+
+        const btn1= box.children[0]
+         btn1.addEventListener('click',()=>{
+            console.log('hllo');
+            window.location.href='category.html'
+         })
+        
+    </script>
+</body>
+</html>
